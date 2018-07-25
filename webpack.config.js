@@ -13,7 +13,6 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist'), // 静态资源路径
         /* proxy: {
             '/api': 'http://localhost:3001',
-            // pathRewrite: {'^/api' : ''},
             changeOrigin: true,
             secure: false 
         } */
