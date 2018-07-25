@@ -4,7 +4,7 @@
 
 ### using webpack-dev-server
 
-将webpack-config.js注释部分放开，执行以下命令，会自动打开http://localhost:3000
+前端开发时，可利用这个进行跨域。将webpack-config.js注释部分放开，执行以下命令，会自动打开http://localhost:3000
 
 ```
 yarn start
@@ -12,7 +12,7 @@ yarn start
 
 ### using express + http-proxy-middleware
 
-执行以下命令后，请求http://localhost:3000
+属于前端处理跨域。执行以下命令后，请求http://localhost:3000
 
 ```
 yarn server
@@ -20,7 +20,7 @@ yarn server
 
 ### using nginx
 
-相当于将本地调用的url拦截，代理成远程服务的域名，远程服务认为这是同一个源，就不会出现跨域错误，设置完以下配置，请求http://localhost:3000
+nginx作为代理进行跨域。相当于将本地调用的url拦截，代理成远程服务的域名，远程服务认为这是同一个源，就不会出现跨域错误，设置完以下配置，请求http://localhost:3000
 
 nginx 在mac上安装
 
@@ -61,8 +61,8 @@ location ^~ /api{
 
 ### using cors
 
-保留webpack.config.js注释部分，请求http://localhost:3000
+跨域资源共享，是解决跨域的一个标准，主要是后台处理。保留webpack.config.js注释部分，请求http://localhost:3000
 
 ### jsonp
 
-主要是利用 <script></script> 标签的请求没有同源策略限制，将请求放到该标签中，包括回调函数名称。这里不做实验
+主要是利用 <script></script> 标签的请求没有同源策略限制，将请求放到该标签中，包括回调函数名称。后台相应资源请求，并将结果作为参数放在回调函数参数中，返回给浏览器。这里不做实验
