@@ -1,6 +1,6 @@
 # 接口跨域
 
-主要是将本地的域代理成远程的域，对应的后台服务在[node-server](https://github.com/yurong111/node-server)
+主要是将本地的域代理成远程的域，对应的后台服务在[node-server](https://github.com/yurong111/node-server)，所需需要先启动服务
 
 ### using webpack-dev-server
 
