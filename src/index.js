@@ -28,7 +28,7 @@ function accentControl_backend() {
     axios.request({
         url: 'http://localhost:3001/api/login',
         method: 'GET',
-        withCredentials: true,  // 带认证的请求，前后端都需要设置该参数，才能让浏览器在不同源的情况下自动读取cookie
+        // withCredentials: true,  // 带认证的请求，前后端都需要设置该参数，才能让浏览器在不同源的情况下自动读取cookie
         headers: {'X-Requested-With': 'XMLHttpRequest'}, // 增加特殊头，触发非简单请求
     }).then((res) => {
         console.log('res', res)
